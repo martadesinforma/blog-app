@@ -15,6 +15,7 @@ import { CommentFormComponent } from './comments/comment-form/comment-form.compo
 import { CommentListComponent } from './comments/comment-list/comment-list.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { PostCardComponent } from './layauts/post-card/post-card.component';
 
 
 
@@ -32,7 +33,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     CommentFormComponent,
     CommentListComponent,
     SubscriptionFormComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,
