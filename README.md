@@ -1,27 +1,27 @@
-# BlogApp
+## Estructura de esta aplicación:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+1. Main Pages en la carpeta pages :
+- Home Component
+- Single-category Component
+- Single-post Component
+- Terms-and-condition Component
+- Contact-us Component
+- Abaut-us Component
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+2. Componentes para áreas comunes de las diferentes páginas en la carpeta Layauts:
+- Header Component
+- Category-Navbar Component
+- Footer Component
+- Post-Card Component
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+3. Componentes únicos en una página:
+- Comment-form Component en la carpeta Comments
+- Comment-list Component en la carpeta Comments
+- Subcription-form Component
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Este es un breve listado del contenido del proyecto:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Uso de Bootstrap al haber lanzado el comando `npm i bootstrap@4.6` y al haber escrito dentro de styles de  angular.json `"node_modules/bootstrap/dist/css/bootstrap.min.css"` para incluir el archivo de Bootstrap como un estilo global, para que estén disponibles en toda la aplicación.
