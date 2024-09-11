@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layauts/header/header.component';
@@ -16,6 +19,7 @@ import { CommentListComponent } from './comments/comment-list/comment-list.compo
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { PostCardComponent } from './layauts/post-card/post-card.component';
+import { environment } from '../environments/environment.prod';
 
 
 
@@ -40,7 +44,10 @@ import { PostCardComponent } from './layauts/post-card/post-card.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), // Inicializa Firebase
+    provideFirestore(()=> getFirestore()), // Importa y configura Firestore
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
