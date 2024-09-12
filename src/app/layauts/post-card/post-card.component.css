@@ -1,3 +1,9 @@
 .card {
   max-width: 400px;
 }
+
+.card-img-top {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 200px; /* Define una altura fija */
+  object-fit: cover; /* Recorta la imagen para que llene el contenedor sin deformarse */
+}
