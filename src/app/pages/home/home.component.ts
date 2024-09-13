@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+
     this.postService.loadFeatured()
       .subscribe(val => {
         this.featuredPostsArray = val;
@@ -26,7 +27,9 @@ export class HomeComponent implements OnInit {
       .subscribe(val => {
         this.latestPostArray = val;
       })
+
   }
+
 
 
 }
