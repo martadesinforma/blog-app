@@ -21,6 +21,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { PostCardComponent } from './layauts/post-card/post-card.component';
 import { environment } from '../environments/environment.prod';
 
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { environment } from '../environments/environment.prod';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), // Inicializa Firebase
