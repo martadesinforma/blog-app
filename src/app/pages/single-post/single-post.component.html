@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row" *ngIf="postData">
     <div class="col-md-9">
       <div class="card shadow-effect"> <!-- entrada del post -->
         <img src="{{postData.postImgPath}}" alt="image">
@@ -8,24 +8,26 @@
           <small class="bg-light text-danger text-center">{{postData.category.category}}</small>
           <small class="bg-light text-sucess text-center ml-2" *ngIf="postData.isFeatured">Featured</small>
           <small class="bg-light text-info text-center ml-2">Viwes - {{postData.views}}</small>
-          <small class="bg-light text-warning text-center ml-2">LAST UPDATED - {{postData.createdAt.toMillis() | date}}</small>
+          <small class="bg-light text-warning text-center ml-2">LAST UPDATED - {{postData.createdAt.toMillis() |
+            date}}</small>
 
           <h1 class="mt-3 mb-3">{{postData.title}}</h1>
 
-          <p [innerHtml]="postData.content"></p> <!-- [innerHtml] se utiliza cuando quieres insertar contenido HTML en lugar de texto plano. Esto es importante porque el uso normal de interpolación ({{}}) solo escapa el HTML, es decir, lo muestra como texto plano sin interpretar las etiquetas HTML. -->
+          <p [innerHtml]="postData.content"></p>
+          <!-- [innerHtml] se utiliza cuando quieres insertar contenido HTML en lugar de texto plano. Esto es importante porque el uso normal de interpolación ({{}}) solo escapa el HTML, es decir, lo muestra como texto plano sin interpretar las etiquetas HTML. -->
         </div>
       </div>
-
-      <app-comment-form></app-comment-form> <!-- formulario para agregar comentarios -->
+      <!-- Enviar el id de post al componente commentForm que lo va a recibir mediante un input-->
+      <app-comment-form [docId]="postData.id!"></app-comment-form> <!-- formulario para agregar comentarios -->
       <app-comment-list></app-comment-list> <!-- lista de comentarios -->
     </div>
 
 
 
     <div class="col-md-3">
-     <div *ngFor="let similarPost of similarPostArray" class="mb-3">
-      <app-post-card [postData]="similarPost"></app-post-card>
-     </div>
+      <div *ngFor="let similarPost of similarPostArray" class="mb-3">
+        <app-post-card [postData]="similarPost"></app-post-card>
+      </div>
 
     </div>
   </div>
