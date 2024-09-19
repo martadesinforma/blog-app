@@ -13,7 +13,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { SinglePostComponent } from './pages/single-post/single-post.component';
 import { SingleCategoryComponent } from './pages/single-category/single-category.component';
 import { TermsAndConditionComponent } from './pages/terms-and-condition/terms-and-condition.component';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { CommentFormComponent } from './comments/comment-form/comment-form.component';
 import { CommentListComponent } from './comments/comment-list/comment-list.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
@@ -35,7 +34,6 @@ import { FormsModule } from '@angular/forms';
     SingleCategoryComponent,
     SinglePostComponent,
     TermsAndConditionComponent,
-    ContactUsComponent,
     CommentFormComponent,
     CommentListComponent,
     SubscriptionFormComponent,

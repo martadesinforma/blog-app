@@ -5,7 +5,6 @@
 - Single-category Component
 - Single-post Component
 - Terms-and-condition Component
-- Contact-us Component
 - Abaut-us Component
 
 
@@ -30,6 +29,7 @@
 - categories.service en la carpeta services
 - posts.service en la carpeta services
 - subscribers.service en la carpeta services 
+- comments.service en la carpeta services
 
 6. Interfaces
 post.ts en la carpeta models
@@ -56,6 +56,8 @@ sub.ts en la carpeta models
 2. 7. En firestore Database ya tenemos datos guardados en una colección llamada post. En el servicio posts, tenemos la función countViews(postId: any) que incrementa en 1 el número de visualizaciones del campo views en un documento de la colección posts en Firestore, identificado por postId. Esta funión se utiliza en el componente single-post
 
 2. 8. En el servicio subscribers hemos creados dos funciones que se utilizan conjuntamente en el componente subscription-form. La función checkSubscriber() realiza una consulta en Firestore Database para verificar si un suscriptor con un email específico ya existe en la colección subscribers, y la función subData() guarda el email y el nombre de un suscriptor en la colección subscribers de Firestore Database cuando no existe esta refrencia todavía en la colección. Usando estas dos funciones en conjunto conseguimos que un usuario no se pueda registrar más de 1 vez con el mismo correo.
+
+2. 9. En el servicio comments hemos creados dos funciones, addComments() para para guardar datos de commentForm en una colección específica de Database de Firestore, y  loadData(urlId: any) que interactúa con Firestore  Database para obtener  posts filtrados de la colección comments por un id específico (urlId).  Todos los comentarios que esten escritos en el mismo post tienen el mismo urlId.
 
 
 3. Uso de Formularios Basados en Plantillas y validación de  formulario en el componente  subscription-form. 
