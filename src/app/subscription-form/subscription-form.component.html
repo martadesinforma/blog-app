@@ -25,7 +25,7 @@
 
       #Name="ngModel": Crea una referencia local a ese ngModel para que puedas acceder a propiedades del modelo (como el valor, si es válido o no, etc.) en la plantilla HTML.
        -->
-      <form  class="form-inline mb-5 mt-5" #subForm=ngForm (ngSubmit)="onSubmit(subForm.value)" *ngIf="!isSubscribed"> <!-- *ngIf="!isSubscribed" para que cuando  nos suscribamos con un correo nuevo ya no te aparezca mas el formulario -->
+      <form  class="form-inline mb-5 mt-5" #subForm="ngForm" (ngSubmit)="onSubmit(subForm)" *ngIf="!isSubscribed">
 
         <div class="form-group col-md-5">
           <input

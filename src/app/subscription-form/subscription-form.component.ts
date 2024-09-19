@@ -17,10 +17,9 @@ export class SubscriptionFormComponent {
 
   onSubmit(formVal: any) {
     const subscriberData: Sub = {
-      name: formVal.name,
-      email: formVal.email,
+      name: formVal.value.name,
+      email: formVal.value.email,
     }
-
 
     this.subscribersService.checkSubscriber(subscriberData.email)
       .then(val => {  // Ejecutamos la consulta y devolvemos la promesa que resuelve con los documentos que coinciden con los criterios.
